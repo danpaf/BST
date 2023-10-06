@@ -375,5 +375,27 @@ class BT_run
         // Визуализация дерева в консоли
         Console.WriteLine("Tree Visualization:");
         tree.PrintTree(tree.Root, "", true);
+        
+        
+        Console.WriteLine("AVL TREE:");
+        AVLTree avlTree = new AVLTree();
+
+        // Insert nodes into the BST
+        int[] anArrayNodes1 = {
+            17, 6, 5, 20, 19, 18, 11, 14, 12, 13, 2, 4, 10
+        };
+
+        foreach (int value in anArrayNodes1)
+        {
+            avlTree.Insert(value);
+        }
+
+        // Visualize the BST
+        avlTree.Visualize();
+
+        // In-order traversal of BST
+        Console.Write("In-order Traversal: ");
+        avlTree.InOrderTraversal();
+        
     }
 }
